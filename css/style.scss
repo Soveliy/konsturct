@@ -14,13 +14,82 @@ body{
     padding: 0 15px;
     box-sizing: border-box;
 }
-.bg{
-    background: url(../img/hero.jpg) no-repeat center center;
-    background-size: cover;
+.logo{
+    height: 23px;
+    img{
+        max-height: 100%;
+        max-width: 100%;
+    }
 }
 .hero{
-    height: 100vh;
+    background-image: url(../img/hero.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    &__row{
+        height: calc(100dvh - 68px);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2.5dvh 0 6dvh;
+        box-sizing: border-box;
+    }
+    &__center{
+        color: #fff;
+        text-align: center;
+    }
+    &__title{
+        font-family: $bebas;
+        font-weight: 400;
+        font-size: 60px;
+        letter-spacing: 0.1em;
+        margin: 0 0 2dvh 0;
+
+    }
+    &__desc{
+        font-weight: 600;
+        font-size: 16px;
+       
+       > *:first-child{
+        margin-top: 0;
+       }
+       > *:last-child{
+        margin-bottom: 0;
+       }
+    }
+
+    &__scroll{
+        font-weight: 600;
+        font-size: 11px;
+        letter-spacing: 0.34em;
+        color: #fff;    
+        animation: ease-in-out scroll 2.5s infinite forwards;
+    }
+
 }
-.hero2{
-    height: 100dvh;
+
+@keyframes scroll {
+    0% {
+        transform: translateY(-20px);
+    }
+    50% {
+
+        transform: translateY(20px);
+    }
+    100%{
+        transform: translateY(-20px);
+    }
+        
+    
+}
+
+.header{
+    height: 68px;
+    background-color: red;
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
 }
