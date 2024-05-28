@@ -1,0 +1,27 @@
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 23px;
+  line-height: 177%;
+  letter-spacing: 0.01em;
+  color: #48555b;
+}
+
+.container {
+  max-width: 970px;
+  margin: 0 auto;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
+.bg {
+  background: url(../img/hero.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+.hero {
+  height: 100vh;
+}
+
+.hero2 {
+  height: 100dvh;
+}
