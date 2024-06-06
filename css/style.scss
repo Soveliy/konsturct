@@ -62,19 +62,20 @@ body {
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
-        padding: 2.5dvh 0 6dvh;
+        padding: 4.7dvh 0 7.1dvh;
         box-sizing: border-box;
     }
     &__center {
         color: #fff;
         text-align: center;
+        padding-top: 15dvh;
     }
     &__title {
         font-family: $bebas;
         font-weight: 400;
         font-size: 60px;
         letter-spacing: 0.1em;
-        margin: 0 0 2dvh 0;
+        margin: 0 0 0.5dvh 0;
     }
     &__desc {
         font-weight: 600;
@@ -376,8 +377,11 @@ body {
 }
 
 .footer {
-    padding: 42px 0 50px;
     background-color: #141a20;
+    color: #fff;
+    > .container {
+        padding: 42px 15px 50px;
+    }
     &__row {
         display: flex;
         flex-wrap: wrap;
@@ -393,12 +397,15 @@ body {
             width: 16.6%;
         }
     }
-
+    &__menu {
+        margin-top: -15px;
+    }
     &__list {
         padding: 0;
         margin: 0;
         list-style: none;
         columns: 3;
+        line-height: 1;
         a {
             font-weight: 600;
             font-size: 11px;
@@ -409,4 +416,152 @@ body {
             text-transform: uppercase;
         }
     }
+    &__title {
+        font-weight: 400;
+        font-size: 11px;
+        letter-spacing: 0.08em;
+        margin: 0 0 15px 0;
+    }
+    &__logo {
+        margin-bottom: 15px;
+    }
+    &__desc {
+        font-size: 11px;
+        line-height: 173%;
+        letter-spacing: 0.08em;
+    }
+    &__info {
+        font-size: 11px;
+        line-height: 145%;
+        letter-spacing: 0.08em;
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        p {
+            margin: 0;
+        }
+        a {
+            color: #fff;
+            text-decoration: none;
+        }
+    }
+    &__social {
+        padding-top: 30px;
+    }
 }
+
+.social {
+    &__list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        display: flex;
+        gap: 25px;
+    }
+}
+.copyright {
+    padding: 22px 0;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    color: #fff;
+    text-align: center;
+    background-color: #171819;
+}
+@media (max-width: 1024px) {
+    .section-head {
+        margin-bottom: 40px;
+        flex-direction: column;
+
+        &__desc {
+            margin: 25px 0 10px;
+        }
+    }
+}
+@media (max-width: 768px) {
+    .hero {
+        &__title {
+            font-size: 40px;
+            line-height: 1.2;
+        }
+    }
+    .story {
+        padding: 30px 0;
+
+        &__row {
+            margin-top: 40px;
+            flex-direction: column;
+            gap: 30px;
+        }
+        &__left,
+        &__right {
+            width: 100%;
+        }
+    }
+    .text-content {
+        h3,
+        p {
+            margin: 15px 0;
+        }
+    }
+    .footer {
+        &__col--w33 {
+            width: 50%;
+        }
+        &__col--w16 {
+            width: 100%;
+        }
+        &__col {
+            padding: 5px 14px;
+        }
+        &__row {
+            margin: -5px -14px;
+        }
+        &__social {
+            padding-top: 0;
+        }
+        &__title {
+            line-height: normal;
+        }
+        &__menu {
+            margin-top: 0;
+        }
+
+        > .container {
+            padding: 20px 15px;
+        }
+    }
+    .copyright {
+        padding: 10px 0;
+    }
+
+    .capab {
+        padding: 30px 0;
+        position: relative;
+        overflow: hidden;
+        &__row {
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            margin: 0 -15px;
+            padding: 0 15px;
+            gap: 10px;
+            &::-webkit-scrollbar {
+                background-color: transparent;
+                width: 0;
+            }
+        }
+        &__col {
+            width: 300px;
+            flex-shrink: 0;
+            padding: 0;
+        }
+    }
+}
+
+// &::-webkit-scrollbar {
+//     /* chrome based */
+//     width: 0px; /* ширина scrollbar'a */
+//     background: transparent; /* опционально */
+// }
