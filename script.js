@@ -1,7 +1,4 @@
-// $(document).ready(function () {
-
-//     $('.footer').click(function () {
-//         $('.footer').toggleClass('js-active')
-//     })
-
-// })
+$(".burger").click(function () {
+    $(this).toggleClass('js-active');
+    $('.header__menu').toggleClass('js-active');
+})
